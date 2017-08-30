@@ -1,0 +1,17 @@
+apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: php-deployment
+  namespace: demo-namespace
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: php-app
+    spec:
+      containers:
+      - name: php-app
+        image: manoj1992/sample-php-app:1.0
+        ports:
+        - containerPort: 80
