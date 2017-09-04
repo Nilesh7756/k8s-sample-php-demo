@@ -4,17 +4,27 @@ wget https://raw.githubusercontent.com/Nilesh7756/k8s-sample-php-demo/master/dem
 
 wget https://raw.githubusercontent.com/Nilesh7756/k8s-sample-php-demo/master/demo-sample-php-svc.yaml
 
-kubectl -n demo-namespace
+#Create "demo-namespace" namespace 
 
-kubectl -f sample-namespace.yaml
+kubectl create -f sample-namespace.yaml
 
-kubectl get ns
+kubectl get namespace
+
+#Create Deployment for sample php App
+
+kubectl create -f demo-sample-php.yaml
 
 kubectl get deployment -n demo-namespace
+
+
+#Crerate kubernetes Service
 
 kubectl create -f demo-sample-php-svc.yaml
 
 kubectl get svc -n demo-namespace
+
+
+#Delete Resources
 
 kubectl delete -f demo-sample-php-svc.yaml
 
