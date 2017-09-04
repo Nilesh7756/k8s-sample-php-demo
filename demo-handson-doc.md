@@ -16,6 +16,10 @@ kubectl create -f demo-sample-php.yaml
 
 kubectl get deployment -n demo-namespace
 
+#Get PODs which were created when deployment kind was created
+
+kubectl get pods -n demo-namespace
+
 
 #Crerate kubernetes Service
 
