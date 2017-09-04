@@ -1,1 +1,1 @@
-# k8s-sample-php-demo
+# KUBERNETES 101 Sample PHP example
